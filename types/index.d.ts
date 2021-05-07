@@ -55,6 +55,7 @@ declare namespace TinyOSS {
     secure?: boolean; // instruct OSS client to use HTTPS (secure: true) or HTTP (secure: false) protocol.
     timeout?: string | number; // instance level timeout for all operations, default is 60s
     cname?: boolean; // use custom domain name
+    serverXOSSDate?: string // use custom GMT time for x-oss-date
   }
 
   export type HTTPMethods = "GET" | "POST" | "DELETE" | "PUT";

@@ -50,6 +50,7 @@ export default class TinyOSS {
             accessKeySecret,
             stsToken,
             bucket,
+            serverXOSSDate,
           } = this.opts;
           const verb = 'PUT';
           const contentMd5 = getContentMd5(buf);
@@ -57,7 +58,7 @@ export default class TinyOSS {
           const headers = {
             'Content-Md5': contentMd5,
             'Content-Type': contentType,
-            'x-oss-date': new Date().toGMTString(),
+            'x-oss-date': serverXOSSDate || new Date().toGMTString(),
           };
 
           if (stsToken) {

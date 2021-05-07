@@ -29,7 +29,8 @@ const oss = new TinyOSS({
   // 推荐在浏览器端使用 stsToken 参数
   stsToken: 'security token',
   region: 'oss-cn-beijing',
-  bucket: 'your bucket'
+  bucket: 'your bucket',
+  serverXOSSDate?: 'customUTCString'
 });
 
 const blob = new Blob(['hello world'], { type: 'text/plain' });
